@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.min.css"/>
+</head>
+<body>
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        @RenderBody()
+        <footer class="mastfoot mt-auto">
+            <div class="inner center-block text-center">
+                <p>Linguistic algorithm app, by <a href="https://www.linkedin.com/in/maksivasenko">Maks Ivasenko</a>.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.min.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

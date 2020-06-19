@@ -1,0 +1,45 @@
+﻿@model PECT_Web.Models.Message
+
+@{
+    ViewData["Title"] = "Decryption";
+}
+
+    <header class="masthead mb-auto">
+        <div class="inner">
+            <h3 class="masthead-brand">Linguistic steganography</h3>
+            <nav class="nav nav-masthead justify-content-center">
+                <a class="nav-link" asp-action="Index" asp-controller="Home">Encryption</a>
+                <a class="nav-link active" asp-action="Decryption" asp-controller="Home">Decryption</a>
+            </nav>
+        </div>
+    </header>
+
+<main role="main" class="inner cover">
+    <div class="container center-block text-center h-100">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <h1 class="mb-4 display-4">Wanna know sb's secret?</h1>
+                <p class="lead mb-4">Decrypt your data and get&nbsp;<br>the secret message.</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-2 align-items-center my-auto">
+                <img class="img-fluid p-2 d-block mx-auto" src="~/images/decode2.svg">
+                <h6 class="mt-1">Speed parallel decryption</h6>
+            </div>
+            <div class="col-md-8 pt-3 mx-auto text-center bg-dark shadow-lg border border-light rounded">
+                <form asp-action="Decryption" asp-controller="Home" asp-antiforgery="true" class="" accept-charset="utf-8">
+                    <div class="validation" asp-validation-summary="All"></div>
+                    <div class="form-group purple-border">
+                        <textarea asp-for="InputMessage" placeholder="Type here..." class=" form-control  border border-dark bg-dark text-light " id="exampleTextarea" rows="3" style="margin-top: 0px; margin-bottom: 0px; height: 190px;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-light btn-lg rounded-pill border-dark mb-3">Decrypt data</button>
+                </form>
+            </div>
+            <div class="col-md-2 align-items-center my-auto">
+                <img class="img-fluid d-block p-2 mx-auto" src="~/images/file.svg">
+                <h6 class="mt-1">Package integrity check</h6>
+            </div>
+        </div>
+    </div>
+</main>

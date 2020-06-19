@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Static\css\custom.css" />
+    <Content Include="Static\css\site.css" />
+    <Content Include="Static\js\site.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BuildBundlerMinifier" Version="3.2.447" />
+    <PackageReference Include="BundlerMinifier.Core" Version="3.2.447" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\js\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="PECT_DLL">
+      <HintPath>..\..\PECT_DLL\PECT_DLL\bin\Release\netstandard2.0\PECT_DLL.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
